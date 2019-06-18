@@ -1,6 +1,6 @@
-Attribute VB_Name = "Module11"
-Sub StockVoltotal()
-Attribute StockVoltotal.VB_ProcData.VB_Invoke_Func = "t\n14"
+Attribute VB_Name = "part1"
+Sub StockVolTotal()
+Attribute StockVolTotal.VB_ProcData.VB_Invoke_Func = "t\n14"
    Dim ticker As String
    Dim total As Double  'it can be long integer too
    
@@ -27,7 +27,7 @@ Attribute StockVoltotal.VB_ProcData.VB_Invoke_Func = "t\n14"
      'MsgBox (total)
      For i = 2 To lastRow
         
-        total = total + Cells(i, 7).Value
+        total = total + ws.Cells(i, 7).Value
         
         If ws.Cells(i + 1, 1).Value <> ws.Cells(i, 1).Value Then
            ticker = ws.Cells(i, 1).Value
